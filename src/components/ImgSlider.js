@@ -35,7 +35,8 @@ const ImgSlider = () => {
 export default ImgSlider
 
 const Sliderwrap = styled(Slider)`
-margin-top:10px;
+/* height: 150px; */
+/* margin-top:10px; */
 ul li button{
   &:before{
     font-size: 10px;
@@ -57,6 +58,7 @@ button{
 
 const Wrap = styled.div`
 cursor: pointer;
+/* margin: 0px 15px; */
 img{
   border: 4px solid transparent;
   height: 100%;

@@ -1,12 +1,20 @@
-import React from 'react'
-import styled from 'styled-components'
-import ImgSlider from './ImgSlider'
+import React from 'react';
+import styled from 'styled-components';
+import ImgSlider from './ImgSlider';
+import Movies from './Movies';
+import Viewers from './Viewers';
 
 
 const Home = () => {
   return (
     <Container>
       <ImgSlider />
+      <Viewers />
+      <Movies title={"Latest & Trending"}/>
+      <Movies title={"Popular Shows"}/>
+      <Movies title={"Movies Recomended for you"}/>
+      <Movies title={"Popular Movies"} />
+      <Movies title={"Top Rated"}/>
     </Container>
   )
 }
@@ -15,7 +23,7 @@ export default Home;
 
 const Container = styled.main`
 overflow-x: hidden;
-min-height: calc(100vh - 80px);
+min-height: calc(100vh - 60px);
 padding:0 calc(3.5vw + 5px) ;
 position: relative;
    &:before{

@@ -42,7 +42,7 @@ export default Header
 
 const Nav = styled.nav`
 overflow: hidden;
-height: 80px;
+height: 60px;
 width: 100%;
 background: #090b13;
 display: flex;
@@ -103,6 +103,7 @@ position: relative;
 const UserImg = styled.img`
 width: 100px;
 height: 100px;
-border-radius: 50%;
+/* border-radius: 50%; */
+object-fit: cover;
 cursor: pointer;
 `
