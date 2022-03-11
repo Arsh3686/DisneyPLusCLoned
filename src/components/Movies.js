@@ -31,6 +31,7 @@ const Container = styled.div``
 const Content = styled.div` 
 margin: 20px 0px;
 display: grid;
+
 grid-template-columns: repeat(4,minmax(0,1fr));
 grid-gap: 25px;
 `

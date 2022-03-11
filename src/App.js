@@ -8,6 +8,7 @@ import Home from './components/Home';
 import { BrowserRouter as Router,Route,Link,Routes } from 'react-router-dom';
 import Detail from './components/Detail';
 import Footer from './components/Footer';
+import Login from './components/Login';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
     <Router>
       <Header/>
       <Routes>
+      <Route path="/login" element={<Login />} /> 
         <Route path="/Detail" element={<Detail />} />
         <Route path="/" element={<Home />} />
       </Routes>

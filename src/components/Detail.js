@@ -43,7 +43,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima inventore placea
 padding:"20px 40px"}}>More like this</h2>
 <Containers>
 <Box>
-
     <a href='./detail'><img src="./images/Shangchi.webp" alt=""/></a>
 </Box>
 <Box>
@@ -61,7 +60,6 @@ padding:"20px 40px"}}>More like this</h2>
 <Box>
     <img src="./images/Frozen.webp" alt=""/>
 </Box>
-
 <Box>
     <img src="./images/Eternals.webp" alt=""/>
 </Box>
@@ -74,8 +72,6 @@ padding:"20px 40px"}}>More like this</h2>
 <Box>
     <img src="./images/674425-h.webp" alt=""/>
 </Box>
-
-
 <Box>
     <img src="./images/IceAge.webp" alt=""/>
 </Box>
@@ -89,7 +85,6 @@ padding:"20px 40px"}}>More like this</h2>
     <img src="./images/What-if.webp" alt=""/>
 </Box>
 </Containers>
-
     </>
 
   )
@@ -98,21 +93,30 @@ padding:"20px 40px"}}>More like this</h2>
 export default Detail;
 
 const Containers = styled.div`
-position: relative;
 min-height: max-content;
-margin-left: 23px;
+width: 100vw;
 padding:20px 20px;
 display: grid;
-grid-template-columns: repeat(7,minmax(0,1fr));
+grid-template-rows: repeat(auto,minmax(0,1fr));
+grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+
+@media (max-width:768px){
+    grid-template-columns: repeat(auto-fill,minmax(170px,1fr));
+}
+
+@media (max-width:376px){
+    justify-content: center;
+    grid-template-columns: repeat(1,1fr);
+}
 `
 const Box = styled.div` 
 height: 190px;
 width: 170px;
 border-radius:10px;
 margin-bottom: 30px;
+margin-bottom: 10px;
 cursor: pointer;
 border: none;
-/* padding: 1px; */
 background-color: #161824;
 border: 2px solid white;
 transition: transform 0.3s;
@@ -125,28 +129,52 @@ img{
 &:hover{
     transform: scale(1.10);
 }
+@media (max-width:768px){
+    height: 190px;
+    width: 170px;
+}
+@media (max-width:376px){
+ height: 100%;
+ width: 100%;
+}
 `
 const Container = styled.div` 
-/* overflow-x: hidden; */
 position: relative;
 min-height: calc(100vh-60px);
 margin-left: 23px;
 padding:20px 20px;
-/* background-color: aqua; */
 width: 97vw;
 border: 2px solid rgba(0, 0, 255, 0.644);
 border-radius: 10px;
 margin-top: 20px;
 display: flex;
 align-items: center;
-/* box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.8); */
+
+@media (max-width:768px){
+    &{
+        flex-direction: column;
+        align-self: auto;
+        border: none;
+        width: 100vw;
+        margin-left: 0px;
+        /* padding:6px; */
+        font-size: 10px;
+    }
+}
+
 `
 const ControlButtons = styled.div` 
 height: max-content;
-width: 80%;
+width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+@media (max-width:912px){
+    span{
+        font-size: 12px;
+    }
+    font-size: smaller;
+}
 
 `
 const MovieButton = styled.div` 
@@ -190,6 +218,20 @@ const DetailImg = styled.div`
         object-fit: cover;
         border-radius: 10px;
     }
+    @media (max-width:768px){
+    &{
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            object-fit: cover;
+        }
+    }
+}
 
  `
 const Controls = styled.div` 
@@ -199,14 +241,18 @@ padding: 40px 20px;
 border-radius: 10px;
 width:40%;
 height: 400px;
-
-/* transform: translateX(20px); */
 background-color: #040714;
 &:after{
     border-right:2px ridge black;
     border-left: transparent;
     opacity: 0.3;
 }
+@media (max-width:768px){
+    &{
+        display: none;
+    }
+}
+
 `
 
 const Desc = styled.div` 
