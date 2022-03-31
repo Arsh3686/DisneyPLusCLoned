@@ -48,6 +48,12 @@ background: #090b13;
 display: flex;
 align-items: center;
 padding: 0 36px;
+
+&{
+  @media (max-width:512px){
+    justify-content: space-between;
+  }
+}
 `
 
 const Logo = styled.img`
@@ -95,6 +101,11 @@ position: relative;
     transition:all 250ms cubic-bezier(0.25,0.46,0.45,0.94) 0s;
   }
 }
+}
+&{
+    @media (max-width:512px){
+        display: none;
+        color: green;
 }
 
 `

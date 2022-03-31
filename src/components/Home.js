@@ -1,11 +1,15 @@
-import React from 'react';
+import React ,{useEffect} from 'react';
 import styled from 'styled-components';
 import ImgSlider from './ImgSlider';
 import Movies from './Movies';
 import Viewers from './Viewers';
+// import * as firebase from "firebase/app";
 
 
 const Home = () => {
+// useEffect( ()=>{
+// },[])
+
   return (
     <Container>
       <ImgSlider />
